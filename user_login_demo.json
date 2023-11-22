@@ -1,0 +1,7 @@
+{
+
+        username: "marco.bot",
+        password: "MarcoBot",
+        clientId: "betsoftApi",
+        clientSecret: "XXXXXXXXXXXXXXXXXXXXXXXXX"
+}
