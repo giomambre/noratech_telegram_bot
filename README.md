@@ -4,7 +4,7 @@ It is much more convenient for a person to enter the data of the work carried ou
 Through the bot I managed to make the interface even more user friendly since arxivar has not the best gui.
 Ps. I made this bot when I was 17 and it was my approach with Node and Json and APIs so i know it's not good  code.
 
-i used [Telegraf](https://telegraf.js.org/) as frameworkand [Axios](https://axios-http.com/docs/intro) for http requests 
+i used [Telegraf](https://telegraf.js.org/) as framework and [Axios](https://axios-http.com/docs/intro) for http requests 
   
 Arxivar Interface:
 
