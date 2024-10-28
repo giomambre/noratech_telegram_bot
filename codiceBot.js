@@ -29,17 +29,7 @@ const insertArrayIntoArray = (a, b, index) => {
     return a;
 };
 
-function axiosTest() {
-    // create a promise for the axios request
-    const promise = axios.get('http://arxdemo.betsoft-srl.it/arxivarnextwebapi//api/masks')
 
-    // using .then, create a new promise which extracts the data
-    const dataPromise = promise.then((response) => response.data)
-
-    // return it
-    console.log(response.data)
-    return dataPromise
-}
 var oreAdd = 0,
     oretot = 0,
     minAdd = 0,
