@@ -67,7 +67,7 @@ bot.hears("Nuovo rapportino ➕", (ctx) => {
     val[9] =
         "-------------------------------------------------------------------------------------";
     remove_keyboard = true;
-    step_2 = "ciao";
+    step_2 = "true"; //serve per controllore se è la prima esecuzione oppure no
     step = 0;
     ctx.reply("Inserire il nome del cliente");
 });
@@ -99,7 +99,7 @@ bot.action("Nuovo rapportino", (ctx) => {
     val[8] =
         "-------------------------------------------------------------------------------------";
     remove_keyboard = true;
-    step_2 = "ciao";
+    step_2 = "true";
     step = 0;
     ctx.reply("Inserire il nome del cliente");
 });
@@ -1534,7 +1534,7 @@ bot.action("invia", (ctx) => {
 //codice eseguido ad ogni invio di un messaggio
 bot.on("message", (ctx) => {
     var testo = ctx.message.text;
-    if (step_2 == "ciao") {
+    if (step_2 == "true") {
         switch (step) {
             case 0:
                 val_valori[0] = testo; //salvataggio del cliente inserito
