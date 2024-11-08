@@ -1,10 +1,10 @@
 # noratech_telegram_bot
 Telegram bot based on Node which helps the workers of the Noratech company to enter the reports of their work on .
-It is much more convenient for a person to enter the data of the work carried out from the smartphone than to open the site and enter everything manually. 
+It is much more convenient for a worker to enter the data of their work from the smartphone than to open the site and enter everything manually. 
 Through the bot I managed to make the interface even more user friendly since arxivar has not the best gui.
-Ps. I made this bot when I was 17 and it was my approach with Node and Json and APIs so i know it's not good  code.
+Ps. I made this bot when I was 17 and it was my first time with Javasrcipt, Json and APIs, the entire code has been made in 3 weeks (inluding the time to learn those technologies).
 
-i used [Telegraf](https://telegraf.js.org/) as framework and [Axios](https://axios-http.com/docs/intro) for http requests 
+I've used [Telegraf](https://telegraf.js.org/) as framework and [Axios](https://axios-http.com/docs/intro) for http requests 
   
 Arxivar Interface:
 
