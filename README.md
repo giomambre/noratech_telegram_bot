@@ -11,9 +11,13 @@ Arxivar Interface:
 
 ![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/23118c33-03a4-4321-96aa-aa0c1a9d141e)
 
-Bot Interface : 
+Bot Interface:
+
+In this image, there is a list of company, they are taken by the bot through an HTTP request:
 
 ![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/9590908f-78fe-445b-b8dc-ace3c1b67316)
+
+
 
 
 ![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/d3e5f2cf-8ca7-4dd9-9a9c-f899b704368a)
