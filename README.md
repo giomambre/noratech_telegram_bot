@@ -11,13 +11,13 @@ Arxivar Interface:
 
 ![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/23118c33-03a4-4321-96aa-aa0c1a9d141e)
 
-Bot Interface:
 
 In this image, there is a list of company, they are taken by the bot through an HTTP request:
 
 ![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/9590908f-78fe-445b-b8dc-ace3c1b67316)
 
 
+Bot Interface with Gui:
 
 
 ![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/d3e5f2cf-8ca7-4dd9-9a9c-f899b704368a)
@@ -26,7 +26,7 @@ In this image, there is a list of company, they are taken by the bot through an 
 ![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/174efaa6-86a4-424a-9635-a505bb4de545)
 
 
-it also has the option to edit the data before save it: 
+it has the option to edit the data before save it: 
 
 ![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/e285e64a-ca2d-4e7c-b7f2-ab2b5b5f822a)
 
