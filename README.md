@@ -92,9 +92,9 @@ Once the bot is running, you can interact with it on Telegram:
 ```
 .
 ├── codiceBot.js          # Main bot logic and interaction handler
-├── mask.json             # (Empty) Potentially for ARXivar mask definition
+├── mask.json             # (Asked to hide this) ARXivar mask definition
 ├── README.md             # This file
-├── reply_markup.json     # (Empty) Potentially for Telegram keyboard layouts
+├── reply_markup.json     # (Asked to hide this) Telegram keyboard layouts
 ├── user_login_demo.json  # Example of ARXivar login credentials
 └── .git/                   # Git version control files
 ```
