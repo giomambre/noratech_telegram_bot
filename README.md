@@ -1,36 +1,113 @@
-# noratech_telegram_bot
-Telegram bot based on Node which helps the workers of the Noratech company to enter the reports of their work on .
-It is much more convenient for a worker to enter the data of their work from the smartphone than to open the site and enter everything manually. 
-Through the bot I managed to make the interface even more user friendly since arxivar has not the best gui.
-Ps. I made this bot when I was 17 and it was my first time with Javasrcipt, Json and APIs, the entire code has been made in 3 weeks (inluding the time to learn those technologies).
+# Noratech Telegram Bot
 
-I've used [Telegraf](https://telegraf.js.org/) as framework and [Axios](https://axios-http.com/docs/intro) for http requests 
-  
-Arxivar Interface:
+This is a Telegram bot for creating and managing work reports. It allows users to input client information, work details, hours, and descriptions, and then sends the data to an ARXivar Next instance.
 
+## Features
 
-![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/23118c33-03a4-4321-96aa-aa0c1a9d141e)
+- **Create new work reports** with the following information:
+  - Client name
+  - Type of work (e.g., Analysis, Assistance, Development)
+  - Date of work
+  - Hours and minutes worked
+  - Billable and non-billable hours
+  - Description of the work performed
+- **View a list of previously submitted reports.**
+- **Edit report fields** before final submission.
+- **Integration with ARXivar Next Web API** to archive the reports.
 
+### Arxivar Interface
 
-In this image, there is a list of company, they are taken by the bot through an HTTP request:
+![arxivar interface](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/23118c33-03a4-4321-96aa-aa0c1a9d141e)
 
-![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/9590908f-78fe-445b-b8dc-ace3c1b67316)
+### Bot Interface
 
+**Main Menu:**
 
-Bot Interface with Gui:
+![bot interface](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/d3e5f2cf-8ca7-4dd9-9a9c-f899b704368a)
 
+**Selecting Work Type:**
 
-![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/d3e5f2cf-8ca7-4dd9-9a9c-f899b704368a)
+![work type](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/174efaa6-86a4-424a-9635-a505bb4de545)
 
+**Editing Data:**
 
-![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/174efaa6-86a4-424a-9635-a505bb4de545)
+![edit data](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/e285e64a-ca2d-4e7c-b7f2-ab2b5b5f822a)
 
+**Report Summary:**
 
-it has the option to edit the data before save it: 
+![report summary](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/e67b8cbb-7ad1-49f6-9d9b-a6d6358c3d6c)
 
-![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/e285e64a-ca2d-4e7c-b7f2-ab2b5b5f822a)
+## Getting Started
 
-the summary of the report that has just been sent:
+### Prerequisites
 
-![immagine](https://github.com/decoder338/noratech_telegram_bot/assets/71758759/e67b8cbb-7ad1-49f6-9d9b-a6d6358c3d6c)
+- [Node.js](https://nodejs.org/) installed on your machine.
+- A Telegram Bot Token. You can get one by talking to the [BotFather](https://t.me/botfather).
+- Access to an ARXivar Next instance with API credentials.
 
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/noratech_telegram_bot.git
+   ```
+2. **Navigate to the project directory:**
+   ```bash
+   cd noratech_telegram_bot
+   ```
+3. **Install the dependencies:**
+   ```bash
+   npm install
+   ```
+4. **Configure the bot:**
+   - Open `codiceBot.js` and replace `"5101055245:AAF8tO4znUcOCs8xf2OCb2vAs1qL8rdrGAE"` with your Telegram Bot Token.
+   - In the same file, update the ARXivar API endpoint and credentials:
+     ```javascript
+     axios.post('http://arxdemo.betsoft-srl.it//ARXivarNextWebApi/api/Authentication', {
+         username: "your-arxivar-username",
+         password: "your-arxivar-password",
+         clientId: "your-arxivar-client-id",
+         clientSecret: "your-arxivar-client-secret"
+     })
+     ```
+
+### Running the Bot
+
+To start the bot, run the following command in your terminal:
+
+```bash
+node codiceBot.js
+```
+
+## Usage
+
+Once the bot is running, you can interact with it on Telegram:
+
+- **`/start`**: Initializes the bot and shows the main menu.
+- **Nuovo rapportino ➕**: Starts the process of creating a new work report. The bot will guide you through the required fields.
+- **Guarda rapportini inviati ✅**: Displays a list of all the reports you have submitted.
+
+## Project Structure
+
+```
+.
+├── codiceBot.js          # Main bot logic and interaction handler
+├── mask.json             # (Empty) Potentially for ARXivar mask definition
+├── README.md             # This file
+├── reply_markup.json     # (Empty) Potentially for Telegram keyboard layouts
+├── user_login_demo.json  # Example of ARXivar login credentials
+└── .git/                   # Git version control files
+```
+
+## Dependencies
+
+- [telegraf](https://www.npmjs.com/package/telegraf): A library for creating Telegram bots.
+- [axios](https://www.npmjs.com/package/axios): A promise-based HTTP client for making requests to the ARXivar API.
+
+## API Integration
+
+The bot integrates with the **ARXivar Next Web API** to store the work reports.
+
+- **Authentication**: The bot authenticates with the ARXivar API using the credentials provided in `codiceBot.js`.
+- **Data Submission**: When a user confirms a new report, the bot constructs a JSON payload with the collected data and sends it to the `/api/masks/{mask_id}/profile` endpoint.
+- **Mask ID**: The `mask_id` (`bfd3550a6a4743cdab7b17006ef96810`) corresponds to a specific mask in ARXivar designed to store the "Rapporto di intervento Telegram".
